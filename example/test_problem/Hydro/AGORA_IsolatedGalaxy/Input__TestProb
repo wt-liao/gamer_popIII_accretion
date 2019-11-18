@@ -1,0 +1,21 @@
+# problem-specific runtime parameters
+AGORA_VcProf_Filename      vcirc.dat               # filename of the circular velocity radial profile
+AGORA_HaloPar_Filename     halo.dat                # filename of the halo  particles
+AGORA_DiskPar_Filename     disk.dat                # filename of the disk  particles
+AGORA_BulgePar_Filename    bulge.dat               # filename of the bulge particles
+AGORA_DiskScaleLength      3.42180552924182        # disk scale length [kpc]
+AGORA_DiskScaleHeight      3.42180552924182e-1     # disk scale height [kpc]
+AGORA_DiskTotalMass        4.29661e10              # disk total mass (gas + stars) [Msun]
+AGORA_DiskGasMassFrac      0.2                     # disk gas mass fraction (disk_gas_mass / disk_total_mass)
+AGORA_DiskGasTemp          1.0e4                   # disk gas temperature [K]
+AGORA_HaloGasNumDensH      7.71910124754943e-7     # halo atomic hydrogen number density
+                                                   # = halo_gas_mass_density / atomic_hydrogen_mass [cm^{-3}]
+AGORA_HaloGasTemp          1.0e6                   # halo gas temperature [K]
+
+AGORA_UseMetal             1                       # add and advect a metal density field
+                                                   # --> to enable this option, one must
+                                                   #     (1) set AGORA_(Disk/Halo)MetalMassFrac properly
+                                                   #     (2) increase both NCOMP_PASSIVE_USER and PAR_NATT_USER by 1 in the Makefile
+                                                   # --> necessary if one wants to enable metal_cooling in Grackle
+AGORA_DiskMetalMassFrac    1.295e-2                # disk metal mass fraction (disk_metal_mass / disk_gas_mass)
+AGORA_HaloMetalMassFrac    1.295e-8                # halo metal mass fraction (halo_metal_mass / halo_gas_mass)
